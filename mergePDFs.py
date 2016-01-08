@@ -1,4 +1,3 @@
-#! python3
 # mergePDFs.py Combines all the PDFs in the current direction into one PDF
 # inspired by "Automate the Boring Stuff"
 
@@ -21,11 +20,12 @@ for filename in pdfFiles:
     pdfReader = PyPDF2.PdfFileReader(fileObj)
 
     # add all pages of pdf
-    for pgNum in range (0, pdfReader.numPages):
+    for pgNum in range(0, pdfReader.numPages):
         pgObj = pdfReader.getPage(pgNum)
         pdfWriter.addPage(pgObj)
 
 # save the merged pdf
-mergedPdf = open('merged.pdf', 'wb')
+outputName = raw_input('Enter a name for the merged pdf: ')
+mergedPdf = open(outputName, 'wb')
 pdfWriter.write(mergedPdf)
 mergedPdf.close()
