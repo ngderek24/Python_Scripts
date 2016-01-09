@@ -1,4 +1,4 @@
-# mergePDFs.py Combines all the PDFs in the current direction into one PDF
+# mergepdfs.py Combines all the PDFs in the current direction into one PDF
 # inspired by "Automate the Boring Stuff"
 
 import PyPDF2, os
